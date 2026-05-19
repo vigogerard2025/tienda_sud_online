@@ -6,7 +6,7 @@ import CartSidebar from "./CartSidebar";
 
 const links = [
   { href: "/", label: "Inicio" },
-  { href: "/productos", label: "Productos" },
+  { href: "/productos", label: "Colección" },
   { href: "/categorias", label: "Categorías" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
@@ -17,91 +17,75 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-[0_2px_20px_rgba(26,10,0,0.08)]"
-          : "bg-white/90 backdrop-blur-md shadow-sm"
+          ? "bg-[#f5f0eb]/95 backdrop-blur-xl shadow-[0_2px_30px_rgba(10,10,15,0.08)] border-b border-[#c9a84c]/20"
+          : "bg-[#f5f0eb]/80 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 gap-2">
-          {/* ── Logo ── */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 group flex-shrink-0 min-w-0"
-          >
-            <div className="relative flex-shrink-0">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-[0_4px_12px_rgba(234,88,12,0.35)] group-hover:shadow-[0_6px_20px_rgba(234,88,12,0.45)] transition-all duration-300 group-hover:scale-105">
-                <span className="text-base sm:text-xl">🍗</span>
-              </div>
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-yellow-400 rounded-full border-2 border-white animate-pulse-warm" />
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-4">
+
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+            <div className="w-8 h-8 bg-[#0a0a0f] rounded-sm flex items-center justify-center shadow-md group-hover:bg-[#c9a84c] transition-colors duration-300">
+              <span className="text-[#c9a84c] text-xs font-accent tracking-wider group-hover:text-[#0a0a0f] transition-colors">VS</span>
             </div>
-            <div className="min-w-0">
-              <p className="font-display text-base sm:text-xl text-orange-800 leading-none tracking-tight truncate">
-                Sabor Charitos
-              </p>
-              <p className="text-[9px] sm:text-[10px] text-orange-400 font-medium tracking-widest uppercase leading-none mt-0.5 truncate">
-                El Sabor que enamora
-              </p>
+            <div>
+              <p className="font-accent text-xl text-[#0a0a0f] leading-none tracking-[0.15em]">VERO STUDIO</p>
+              <p className="text-[9px] text-[#c9a84c] font-semibold tracking-[0.25em] uppercase leading-none mt-0.5">Diseño Personalizado</p>
             </div>
           </Link>
 
-          {/* ── Desktop Nav links ── */}
-          <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-1">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="relative px-3 py-2 text-sm font-medium text-stone-600 hover:text-orange-700 transition-colors duration-200 rounded-xl hover:bg-orange-50 group whitespace-nowrap"
+                className="relative px-4 py-2 text-xs font-semibold text-[#0a0a0f]/70 hover:text-[#0a0a0f] tracking-widest uppercase transition-colors duration-200 rounded group"
               >
                 {link.label}
-                <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full group-hover:w-4 transition-all duration-300" />
+                <span className="absolute bottom-1 left-4 right-4 h-[1px] bg-[#c9a84c] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </Link>
             ))}
           </nav>
 
-          {/* ── Right: carrito + hamburger ── */}
-          <div className="flex items-center gap-2 flex-shrink-0">
+          {/* Right */}
+          <div className="flex items-center gap-3 flex-shrink-0">
             <CartSidebar />
-            {/* Hamburger — visible en < lg */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-stone-600 hover:text-orange-700 hover:bg-orange-50 transition-all flex-shrink-0"
+              className="lg:hidden p-2 rounded text-[#0a0a0f] hover:text-[#c9a84c] transition-colors flex-shrink-0"
               aria-label="Menú"
             >
               <div className="w-5 flex flex-col gap-1.5">
-                <span
-                  className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-                />
+                <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
+                <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`} />
+                <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
               </div>
             </button>
           </div>
         </div>
       </div>
 
-      {/* ── Mobile menu ── */}
+      {/* Mobile menu */}
       {isMenuOpen && (
-        <nav className="lg:hidden border-t border-orange-100 bg-white/95 backdrop-blur-md animate-fade-up">
-          <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+        <nav className="lg:hidden border-t border-[#c9a84c]/20 bg-[#f5f0eb]/98 backdrop-blur-md animate-fade-up">
+          <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="flex items-center px-4 py-3 rounded-xl text-stone-700 hover:text-orange-700 hover:bg-orange-50 font-medium transition-all text-sm"
+                className="flex items-center px-4 py-3 text-xs font-semibold text-[#0a0a0f]/70 hover:text-[#c9a84c] tracking-widest uppercase transition-colors"
               >
                 {link.label}
               </Link>

@@ -5,153 +5,48 @@ import CategoryCard from "@/components/CategoryCard";
 
 const featuredProducts = [
   {
-    id: "2",
-    name: "Pollo Broster + Chaufa",
-    description:
-      "Pollo broster crujiente con papas fritas, arroz chaufa y ensalada.",
-    price: 12.0,
-    image:
-      "https://pepestubroaster.com/wp-content/uploads/Pollo-broaster-con-papas-fritas-y-arroz-chaufa.jpg",
-    slug: "pollo-broster-chaufa",
+    id: "1",
+    name: "Camiseta Urban Sketch",
+    description: "Camiseta oversize con ilustración a línea. Algodón 100%.",
+    price: 65.0,
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
+    slug: "camiseta-urban-sketch",
   },
   {
     id: "5",
-    name: "Alitas Broster (6 unid.)",
-    description: "Alitas crujientes con papas fritas.",
-    price: 18.0,
-    image:
-      "https://storage.googleapis.com/guiaspro/delivery-caja-alitas-broaster.webp",
-    slug: "alitas-broster-6",
+    name: "Hoodie Studio Classic",
+    description: "Hoodie negro oversize con logo bordado. Fleece premium.",
+    price: 145.0,
+    image: "https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80",
+    slug: "hoodie-studio-classic",
   },
   {
-    id: "9",
-    name: "Mix de Bocaditos (50 unid.)",
-    description: "Variedad de bocaditos para tus eventos.",
+    id: "21",
+    name: "Drop #01 — Monochrome",
+    description: "Drop exclusivo monocromático. Solo 30 unidades. Numeradas.",
+    price: 120.0,
+    image: "https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=600&q=80",
+    slug: "drop-01-monochrome",
+  },
+  {
+    id: "8",
+    name: "Gorra VS Signature",
+    description: "Dad cap negra con logo bordado VERO STUDIO.",
     price: 55.0,
-    image:
-      "https://static.wooweb.site/media/sites/16/2017/05/p_2_0_3_203-Mix-de-Bocaditos-Dulces.jpg",
-    slug: "mix-bocaditos-50",
-  },
-  {
-    id: "45",
-    name: "Cheesecake de Oreo",
-    description: "Deliciosa torta de cheesecake de Oreo.",
-    price: 35.0,
-    image:
-      "https://imgmedia.buenazo.pe/1200x660/buenazo/original/2021/12/10/61b42ee9a7c5372e257c4dee.jpg",
-    slug: "cheesecake-oreo",
+    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80",
+    slug: "gorra-vs-signature",
   },
 ];
 
 const categories = [
-  {
-    id: "1",
-    name: "Pollo Broster",
-    slug: "pollo-broster",
-    icon: "🍗",
-    description: "Crujiente y jugoso",
-    color: "from-orange-600 to-red-600",
-    image:
-      "https://minichef.b-cdn.net/assets/e8/02/cc/85/5c/b9/receta%20de%20pollo%20broaster.png",
-  },
-  {
-    id: "2",
-    name: "Alitas",
-    slug: "alitas",
-    icon: "🍖",
-    description: "Con diferentes salsas",
-    color: "from-red-600 to-orange-500",
-    image:
-      "https://storage.googleapis.com/guiaspro/delivery-caja-alitas-broaster.webp",
-  },
-  {
-    id: "3",
-    name: "Bocaditos",
-    slug: "bocaditos",
-    icon: "🥐",
-    description: "Para tus eventos",
-    color: "from-yellow-500 to-orange-500",
-    image:
-      "https://static.wooweb.site/media/sites/16/2017/05/p_2_0_3_203-Mix-de-Bocaditos-Dulces.jpg",
-  },
-  {
-    id: "4",
-    name: "Pastelitos",
-    slug: "pastelitos",
-    icon: "🧁",
-    description: "Dulces y salados",
-    color: "from-amber-500 to-yellow-400",
-    image: "https://i.ytimg.com/vi/g0LCH0VovyY/maxresdefault.jpg",
-  },
-  {
-    id: "5",
-    name: "Pizzas",
-    slug: "pizzas",
-    icon: "🍕",
-    description: "Masa artesanal",
-    color: "from-red-600 to-rose-500",
-    image:
-      "https://tse4.mm.bing.net/th/id/OIP.424A1jgy2iF5wv8kXAfHTwHaD4?pid=Api&P=0&h=180",
-  },
-  {
-    id: "6",
-    name: "Kekes",
-    slug: "kekes",
-    icon: "🎂",
-    description: "Recetas de siempre",
-    color: "from-violet-600 to-purple-500",
-    image:
-      "https://statics.exitosanoticias.pe/2020/04/4e101e14f36c66aeb81b71f7523772d1.png",
-  },
-  {
-    id: "7",
-    name: "Hamburguesas",
-    slug: "hamburguesas",
-    icon: "🍔",
-    description: "Pan brioche y más",
-    color: "from-yellow-600 to-orange-500",
-    image:
-      "https://img.hogar.mapfre.es/wp-content/uploads/2018/09/hamburguesa-sencilla.jpg",
-  },
-  {
-    id: "8",
-    name: "Tortas",
-    slug: "tortas",
-    icon: "🎂",
-    description: "Para celebrar",
-    color: "from-teal-600 to-emerald-500",
-    image: "https://i.blogs.es/4d76ad/pastel-tres-leches/1366_2000.jpg",
-  },
-  {
-    id: "9",
-    name: "Bebidas",
-    slug: "bebidas",
-    icon: "🥤",
-    description: "Frescas y naturales",
-    color: "from-blue-600 to-cyan-500",
-    image:
-      "https://tse2.mm.bing.net/th/id/OIP.-OolMh0-iBN61zk-AAVkzAHaHa?pid=Api&P=0&h=180",
-  },
-  {
-    id: "10",
-    name: "A la Carta",
-    slug: "a-la-carta",
-    icon: "🍽️",
-    description: "Platos completos",
-    color: "from-green-600 to-lime-500",
-    image:
-      "https://cocina-casera.com/wp-content/uploads/2017/12/Lomosaltado2.jpg",
-  },
-  {
-    id: "11",
-    name: "Cheesecakes",
-    slug: "cheesecakes",
-    icon: "🍰",
-    description: "En torta y en vasito",
-    color: "from-pink-500 to-rose-400",
-    image:
-      "https://imgmedia.buenazo.pe/1200x660/buenazo/original/2021/12/10/61b42ee9a7c5372e257c4dee.jpg",
-  },
+  { id:"1", name:"Camisetas", slug:"camisetas", icon:"👕", description:"Diseños únicos", color:"from-slate-900 to-slate-700", image:"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" },
+  { id:"2", name:"Hoodies", slug:"hoodies", icon:"🧥", description:"Abrigo con estilo", color:"from-zinc-900 to-zinc-700", image:"https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80" },
+  { id:"3", name:"Gorras", slug:"gorras", icon:"🧢", description:"Complementa tu look", color:"from-stone-800 to-stone-600", image:"https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80" },
+  { id:"4", name:"Básicos", slug:"polos-basicos", icon:"👕", description:"La base perfecta", color:"from-neutral-800 to-neutral-600", image:"https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&q=80" },
+  { id:"5", name:"Estampados", slug:"estampados", icon:"🎨", description:"Arte que se lleva", color:"from-[#7c5cbf] to-[#4a3080]", image:"https://images.unsplash.com/photo-1581791534721-e599a74a0f67?w=600&q=80" },
+  { id:"6", name:"Accesorios", slug:"accesorios", icon:"👜", description:"Detalles únicos", color:"from-[#c9a84c] to-[#8a6e2e]", image:"https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=600&q=80" },
+  { id:"7", name:"Edición Limitada", slug:"edicion-limitada", icon:"⚡", description:"Drops exclusivos", color:"from-[#d4607a] to-[#8a2840]", image:"https://images.unsplash.com/photo-1523381294911-8d3cead13475?w=600&q=80" },
+  { id:"8", name:"Personalizar", slug:"personalizacion", icon:"✨", description:"Tu diseño", color:"from-[#2dd4bf] to-[#0d8f80]", image:"https://images.unsplash.com/photo-1562157873-818bc0726f68?w=600&q=80" },
 ];
 
 export default function Home() {
@@ -159,24 +54,42 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* ── Categorías ── */}
-      <section className="py-16 bg-white/50 backdrop-blur-sm">
+      {/* ── MARQUEE CATEGORIES STRIP ── */}
+      <div className="bg-[#0a0a0f] py-5 overflow-hidden border-y border-[#c9a84c]/10">
+        <div className="flex animate-marquee whitespace-nowrap gap-0">
+          {Array(4).fill(categories).flat().map((cat, i) => (
+            <Link
+              key={i}
+              href={`/categorias/${cat.slug}`}
+              className="inline-flex items-center gap-3 px-8 text-sm font-semibold text-[#c8c8d8]/50 hover:text-[#c9a84c] tracking-widest uppercase transition-colors"
+            >
+              <span>{cat.icon}</span>
+              <span>{cat.name}</span>
+              <span className="text-[#c9a84c]/30">✦</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* ── CATEGORÍAS ── */}
+      <section className="py-24 bg-[#f5f0eb]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl text-orange-700 mb-4">
-              Nuestras Categorías
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Explora nuestra variedad de productos frescos y deliciosos
-            </p>
+          <div className="flex items-end justify-between mb-14">
+            <div>
+              <p className="text-[10px] tracking-[0.3em] text-[#c9a84c] uppercase font-semibold mb-3">Explorar</p>
+              <h2 className="font-display text-4xl md:text-5xl text-[#0a0a0f] leading-tight">
+                Nuestras<br /><em>Categorías</em>
+              </h2>
+            </div>
+            <Link href="/categorias" className="hidden sm:inline-flex items-center gap-2 text-[10px] font-semibold tracking-widest uppercase text-[#0a0a0f]/50 hover:text-[#c9a84c] transition-colors">
+              Ver todo
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
             {categories.map((category) => (
-              <div
-                key={category.id}
-                className="w-[calc(50%-8px)] sm:w-[calc(33.333%-14px)] lg:w-[calc(25%-18px)]"
-              >
+              <div key={category.id} className="w-[calc(50%-8px)] sm:w-[calc(33.333%-14px)] lg:w-[calc(25%-18px)]">
                 <CategoryCard {...category} />
               </div>
             ))}
@@ -184,144 +97,101 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Productos Destacados ── */}
-      <section className="py-16 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+      {/* ── FEATURED PRODUCTS ── */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-4xl md:text-5xl text-orange-700 mb-4">
-              Productos Destacados
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Los favoritos de nuestros clientes
-            </p>
+          <div className="flex items-end justify-between mb-14">
+            <div>
+              <p className="text-[10px] tracking-[0.3em] text-[#c9a84c] uppercase font-semibold mb-3">Destacados</p>
+              <h2 className="font-display text-4xl md:text-5xl text-[#0a0a0f] leading-tight">
+                Prendas<br /><em>Favoritas</em>
+              </h2>
+            </div>
+            <Link href="/productos" className="hidden sm:inline-flex items-center gap-2 text-[10px] font-semibold tracking-widest uppercase text-[#0a0a0f]/50 hover:text-[#c9a84c] transition-colors">
+              Toda la colección
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product, index) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                delay={index * 100}
-              />
+            {featuredProducts.map((product, i) => (
+              <ProductCard key={product.id} product={product} delay={i * 100} />
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/productos"
-              className="inline-block bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
-            >
-              Ver Todos los Productos
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Características ── */}
-      <section className="py-16 bg-white">
+      {/* ── PROCESO ── */}
+      <section className="py-24 bg-[#0a0a0f]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-[10px] tracking-[0.3em] text-[#c9a84c] uppercase font-semibold mb-3">¿Cómo funciona?</p>
+            <h2 className="font-display text-4xl md:text-5xl text-white leading-tight">
+              Tu prenda en<br /><em className="text-gradient-gold">3 pasos</em>
+            </h2>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                icon: (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                ),
-                color: "from-orange-500 to-red-500",
-                bg: "from-orange-50 to-amber-50",
-                title: "Entrega Rápida",
-                desc: "Recibe tu pedido en 30-45 minutos",
-              },
-              {
-                icon: (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                ),
-                color: "from-yellow-500 to-orange-500",
-                bg: "from-yellow-50 to-orange-50",
-                title: "Calidad Garantizada",
-                desc: "Ingredientes frescos y de primera",
-              },
-              {
-                icon: (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                ),
-                color: "from-red-500 to-orange-500",
-                bg: "from-red-50 to-orange-50",
-                title: "Hechos con Amor",
-                desc: "Recetas caseras y auténticas",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className={`text-center p-8 rounded-2xl bg-gradient-to-br ${item.bg} shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
-              >
-                <div
-                  className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center`}
-                >
-                  <svg
-                    className="w-10 h-10 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {item.icon}
-                  </svg>
-                </div>
-                <h3 className="font-display text-3xl text-orange-700 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600">{item.desc}</p>
+              { num:"01", title:"Elige tu prenda", desc:"Selecciona el modelo, talla y color que prefieras de nuestra colección.", icon:"👕" },
+              { num:"02", title:"Envía tu diseño", desc:"Mándanos tu arte por WhatsApp o escoge uno de nuestros diseños exclusivos.", icon:"🎨" },
+              { num:"03", title:"Recibe en casa", desc:"Producimos tu prenda en 48h y la enviamos directamente a tu puerta.", icon:"📦" },
+            ].map((step) => (
+              <div key={step.num} className="relative p-8 border border-[#c9a84c]/15 hover:border-[#c9a84c]/40 transition-colors duration-300 group">
+                <p className="font-accent text-7xl text-[#c9a84c]/15 leading-none mb-4 group-hover:text-[#c9a84c]/25 transition-colors">{step.num}</p>
+                <p className="text-3xl mb-4">{step.icon}</p>
+                <h3 className="font-display text-xl text-white mb-3">{step.title}</h3>
+                <p className="text-[#c8c8d8]/50 text-sm leading-relaxed">{step.desc}</p>
+                <div className="absolute bottom-0 left-0 h-[1px] w-0 bg-[#c9a84c] group-hover:w-full transition-all duration-500" />
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA Final ── */}
-      <section className="bg-gradient-to-r from-orange-600 to-red-600 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern
-                id="grid"
-                width="40"
-                height="40"
-                patternUnits="userSpaceOnUse"
-              >
-                <circle cx="20" cy="20" r="1" fill="white" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#grid)" />
-          </svg>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="font-display text-5xl md:text-6xl text-white mb-6">
-            ¿Listo para Ordenar?
+      {/* ── CTA PERSONALIZACIÓN ── */}
+      <section className="relative py-32 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1400&q=80')" }}
+        />
+        <div className="absolute inset-0 bg-[#0a0a0f]/80" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <div className="badge-luxury mb-6 mx-auto w-fit">✦ Personalización disponible</div>
+          <h2 className="font-display text-5xl md:text-6xl text-white mb-6 leading-tight">
+            ¿Tienes una idea?<br />
+            <em className="text-gradient-gold">Hazla realidad.</em>
           </h2>
-          <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
-            Haz tu pedido ahora y disfruta de nuestros deliciosos productos en
-            la comodidad de tu hogar
+          <p className="text-white/50 text-lg max-w-xl mx-auto mb-10">
+            Desde un logo de tu empresa hasta el arte de tu artista favorito — lo estampamos en cualquier prenda.
           </p>
           <Link
-            href="/productos"
-            className="inline-block bg-white text-orange-700 hover:bg-orange-50 font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 shadow-2xl hover:shadow-xl hover:scale-105 active:scale-95"
+            href="/contacto"
+            className="btn-gold inline-flex items-center gap-3"
           >
-            Hacer Pedido Ahora
+            Empezar ahora
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
+        </div>
+      </section>
+
+      {/* ── TRUST SIGNALS ── */}
+      <section className="py-16 bg-[#f5f0eb]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { icon:"🧵", title:"Calidad Premium", desc:"100% algodón peinado" },
+              { icon:"⚡", title:"Producción 48h", desc:"Rápido y eficiente" },
+              { icon:"🚚", title:"Envío gratis", desc:"En pedidos +S/150" },
+              { icon:"🔄", title:"Cambios gratis", desc:"Si no te convence" },
+            ].map((item) => (
+              <div key={item.title} className="group">
+                <p className="text-4xl mb-3 group-hover:scale-110 transition-transform inline-block">{item.icon}</p>
+                <p className="font-display text-lg text-[#0a0a0f] mb-1">{item.title}</p>
+                <p className="text-[#0a0a0f]/50 text-xs">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
